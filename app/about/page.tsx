@@ -101,9 +101,13 @@ export default function AboutPage() {
                   key={cert}
                   className="flex items-center gap-3 rounded-lg border border-border/50 bg-card/50 px-4 py-3"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 font-mono text-sm font-bold text-emerald-400">
-                    CFA
-                  </div>
+                  <Image
+                    src="/cfa-logo.jpg"
+                    alt="CFA Institute"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-lg object-cover"
+                  />
                   <p className="text-sm font-medium">{cert}</p>
                 </div>
               ))}
