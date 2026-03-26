@@ -46,11 +46,12 @@ export default function AboutPage() {
             Sciences to financial risk modeling at Ernst &amp; Young.
           </p>
           <p>
-            Outside of work, I build open-source tools like{" "}
+            Outside of work, I build tools like{" "}
+            <strong className="text-foreground">Pawdig</strong> (an AI document intelligence
+            platform), open-source projects like{" "}
             <strong className="text-foreground">ragviz</strong> (a Graph RAG visualization
-            platform), <strong className="text-foreground">viber</strong> (a DOM capture tool for
-            AI-assisted coding), and <strong className="text-foreground">Pawdig</strong> (an AI
-            document intelligence platform). I&apos;m especially interested in making AI
+            platform) and <strong className="text-foreground">viber</strong> (a DOM capture tool
+            for AI-assisted coding). I&apos;m especially interested in making AI
             technologies more visual, interactive, and accessible to developers.
           </p>
         </article>
