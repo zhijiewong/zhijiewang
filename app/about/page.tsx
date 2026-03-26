@@ -35,8 +35,7 @@ export default function AboutPage() {
             at the intersection of AI and developer productivity. Currently, I work as
             an IT Expert at <strong className="text-foreground">Vector Informatik GmbH</strong> in
             Shanghai, where I design enterprise collaboration platforms, extend
-            RESTful APIs for automotive tool integrations, and build AI agents that
-            connect large language models to real-world engineering workflows.
+            RESTful APIs for automotive tool integrations.
           </p>
           <p>
             My journey started at <strong className="text-foreground">Penn State University</strong>,
