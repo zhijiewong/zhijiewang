@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Zhijie Wang",
-  tagline: "Turning coffee into community-driven code",
+  tagline: "Turning coffee into community-driven code ☕",
   description:
     "Full-stack developer building AI-powered tools for document intelligence, knowledge visualization, and developer productivity. IT Expert at Vector Informatik GmbH.",
   url: "https://zhijiewang.me",
