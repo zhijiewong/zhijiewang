@@ -133,7 +133,6 @@ export const education = [
 
 export const certifications = [
   "CFA Sustainable Investing Certificate",
-  "AWS Solutions Architect Associate",
 ];
 
 export const navLinks = [
