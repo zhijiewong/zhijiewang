@@ -1,6 +1,6 @@
 # zhijiewang.me
 
-Personal profile website for Zhijie Wang — IT Expert & Full-Stack Developer building AI-powered tools.
+Personal profile website for Zhijie Wang — Turning coffee into community-driven code.
 
 **Live:** [zhijiewang.me](https://zhijiewang.me)
 
