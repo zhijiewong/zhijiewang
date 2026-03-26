@@ -31,18 +31,19 @@ export default function AboutPage() {
         {/* Narrative bio */}
         <article className="prose-invert mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            I&apos;m a full-stack developer with a passion for building tools that sit
-            at the intersection of AI and developer productivity. Currently, I work as
-            an IT Expert at <strong className="text-foreground">Vector Informatik GmbH</strong> in
+            I&apos;m a full-stack developer focused on building AI-powered tools for
+            document intelligence, knowledge visualization, and infrastructure
+            automation. Currently, I work as an IT Expert at{" "}
+            <strong className="text-foreground">Vector Informatik GmbH</strong> in
             Shanghai, where I support enterprise collaboration platforms and extend
             RESTful APIs for automotive tool integrations.
           </p>
           <p>
-            My journey started at <strong className="text-foreground">Penn State University</strong>,
-            where I studied Information Science &amp; Technology with a Business Minor.
-            Since then, I&apos;ve worked across software engineering, data visualization,
-            and IT operations — from geospatial applications at the Chinese Academy of
-            Sciences to financial risk modeling at Ernst &amp; Young.
+            I studied Information Science &amp; Technology at{" "}
+            <strong className="text-foreground">Penn State University</strong>, and have
+            since built software across geospatial systems, financial risk modeling,
+            and enterprise platforms — from the Chinese Academy of Sciences to
+            Ernst &amp; Young to Vector Informatik.
           </p>
           <p>
             Outside of work, I build tools like{" "}
