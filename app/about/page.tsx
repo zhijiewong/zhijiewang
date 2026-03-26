@@ -42,8 +42,7 @@ export default function AboutPage() {
             I studied Information Science &amp; Technology at{" "}
             <strong className="text-foreground">Penn State University</strong>, and have
             since built software across geospatial systems, financial risk modeling,
-            and enterprise platforms — from the Chinese Academy of Sciences to
-            Ernst &amp; Young to Vector Informatik.
+            and enterprise platforms.
           </p>
           <p>
             Outside of work, I build tools like{" "}
