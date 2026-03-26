@@ -50,8 +50,9 @@ export default function AboutPage() {
             platform), open-source projects like{" "}
             <strong className="text-foreground">ragviz</strong> (a Graph RAG visualization
             platform) and <strong className="text-foreground">viber</strong> (a DOM capture tool
-            for AI-assisted coding). I&apos;m especially interested in making AI
-            technologies more visual, interactive, and accessible to developers.
+            for AI-assisted coding). Right now, I&apos;m building an open-source{" "}
+            <strong className="text-foreground">AIOps platform</strong> that applies AI and
+            machine learning to automate IT operations.
           </p>
         </article>
 
