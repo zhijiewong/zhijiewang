@@ -52,19 +52,9 @@ export default async function ProjectPage({
         {/* Header */}
         <div className="mb-10">
           <div className="mb-4 flex items-center gap-4">
-            {project.icon ? (
-              <Image
-                src={project.icon}
-                alt={project.name}
-                width={56}
-                height={56}
-                className="h-14 w-14 rounded-xl object-contain"
-              />
-            ) : (
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/10 font-mono text-lg font-bold text-blue-400">
-                {project.name.charAt(0).toUpperCase()}
-              </div>
-            )}
+            <div className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl ${project.color}`}>
+              {project.emoji}
+            </div>
             <div>
               <h1 className="text-3xl font-bold tracking-tight">
                 {project.name}

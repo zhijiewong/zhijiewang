@@ -19,7 +19,8 @@ export interface Project {
   tech: string[];
   links: { label: string; url: string }[];
   featured: boolean;
-  icon?: string;
+  emoji: string;
+  color: string;
 }
 
 export const projects: Project[] = [
@@ -36,7 +37,8 @@ export const projects: Project[] = [
     tech: ["AI/ML", "Document Processing", "NLP", "Python"],
     links: [{ label: "Website", url: "https://pawdig.com" }],
     featured: true,
-    icon: "/pawdig-icon.ico",
+    emoji: "🐾",
+    color: "text-red-400 bg-red-500/10",
   },
   {
     slug: "ragviz",
@@ -53,6 +55,8 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/zhijiewong/ragviz" },
     ],
     featured: true,
+    emoji: "🧠",
+    color: "text-cyan-400 bg-cyan-500/10",
   },
   {
     slug: "viber",
@@ -69,7 +73,8 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/zhijiewong/viber" },
     ],
     featured: true,
-    icon: "/viber-icon.png",
+    emoji: "⚡",
+    color: "text-yellow-400 bg-yellow-500/10",
   },
   {
     slug: "aiops",
@@ -84,6 +89,8 @@ export const projects: Project[] = [
     tech: ["Monitoring", "Automation", "Infrastructure", "ML", "Python"],
     links: [],
     featured: true,
+    emoji: "🤖",
+    color: "text-green-400 bg-green-500/10",
   },
 ];
 
