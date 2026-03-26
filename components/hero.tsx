@@ -27,9 +27,9 @@ export function Hero() {
           </div>
 
           <p className="max-w-xl text-muted-foreground leading-relaxed">
-            Full-stack developer focused on AI-powered tools, knowledge
-            visualization, and developer productivity. Currently an IT Expert at
-            Vector Informatik GmbH.
+            Exploring the frontier of AI-powered tools, from document
+            intelligence to knowledge graphs and AIOps. Currently an IT Expert
+            at Vector Informatik GmbH.
           </p>
 
           <div className="flex items-center gap-4 text-sm">
