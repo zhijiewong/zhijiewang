@@ -1,6 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import type { Project } from "@/lib/data";
+
+function ProjectIcon({ project }: { project: Project }) {
+  if (project.logo) {
+    return (
+      <Image
+        src={project.logo}
+        alt={project.name}
+        width={40}
+        height={40}
+        className="h-10 w-10 rounded-lg object-cover"
+      />
+    );
+  }
+  return (
+    <div className={`flex h-10 w-10 items-center justify-center rounded-lg text-lg ${project.color}`}>
+      {project.emoji}
+    </div>
+  );
+}
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -9,9 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
       className="group block rounded-lg border border-border/50 bg-card/50 p-6 transition-colors hover:border-blue-500/30 hover:bg-card"
     >
       <div className="mb-3 flex items-center gap-3">
-        <div className={`flex h-10 w-10 items-center justify-center rounded-lg text-lg ${project.color}`}>
-          {project.emoji}
-        </div>
+        <ProjectIcon project={project} />
         <div>
           <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
             {project.name}
@@ -34,3 +52,5 @@ export function ProjectCard({ project }: { project: Project }) {
     </Link>
   );
 }
+
+export { ProjectIcon };
