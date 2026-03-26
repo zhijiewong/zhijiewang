@@ -19,6 +19,7 @@ export interface Project {
   tech: string[];
   links: { label: string; url: string }[];
   featured: boolean;
+  icon?: string;
 }
 
 export const projects: Project[] = [
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     tech: ["AI/ML", "Document Processing", "NLP", "Python"],
     links: [{ label: "Website", url: "https://pawdig.com" }],
     featured: true,
+    icon: "/pawdig-icon.ico",
   },
   {
     slug: "ragviz",
@@ -67,6 +69,7 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/zhijiewong/viber" },
     ],
     featured: true,
+    icon: "/viber-icon.png",
   },
   {
     slug: "aiops",

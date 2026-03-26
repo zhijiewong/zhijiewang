@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icons/favicon.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1C1917" />
+    <meta name="description" content="Pawdig - Intelligent document processing platform" />
+    <meta property="og:title" content="Pawdig" />
+    <meta property="og:description" content="Intelligent document processing platform" />
+    <meta property="og:image" content="/icons/icon-512.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pawdig" />
+    <meta name="twitter:description" content="Intelligent document processing platform" />
+    <meta name="twitter:image" content="/icons/icon-512.png" />
+    <title>Pawdig</title>
+    <script type="module" crossorigin src="/assets/index-GmzRvStJ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/utils-vendor-U6ABOB2a.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-Bce9NwRC.js">
+    <link rel="modulepreload" crossorigin href="/assets/pdf-vendor-D67KUadt.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-vendor-CufblHF9.js">
+    <link rel="modulepreload" crossorigin href="/assets/copilot-vendor-CFuqE_Iv.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-vendor-B9pKqfQm.js">
+    <link rel="modulepreload" crossorigin href="/assets/upload-vendor-C5ft4ovr.js">
+    <link rel="stylesheet" crossorigin href="/assets/copilot-vendor-BzjkycI_.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-CzegqQas.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
