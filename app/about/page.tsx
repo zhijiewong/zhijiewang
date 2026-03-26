@@ -1,0 +1,109 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { skillCategories, education, certifications, siteConfig } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: `${siteConfig.name} — Full-stack developer and IT Expert at Vector Informatik, building AI-powered tools. Penn State IST graduate.`,
+};
+
+export default function AboutPage() {
+  return (
+    <main className="flex-1">
+      <div className="mx-auto max-w-4xl px-6 py-16">
+        <div className="mb-12 flex items-center gap-6">
+          <Image
+            src="/avatar.jpg"
+            alt={siteConfig.name}
+            width={80}
+            height={80}
+            className="h-20 w-20 shrink-0 rounded-full border-2 border-blue-500/30 object-cover"
+          />
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">About Me</h1>
+            <p className="mt-1 text-muted-foreground">
+              The story behind the code
+            </p>
+          </div>
+        </div>
+
+        {/* Narrative bio */}
+        <article className="prose-invert mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            I&apos;m a full-stack developer with a passion for building tools that sit
+            at the intersection of AI and developer productivity. Currently, I work as
+            an IT Expert at <strong className="text-foreground">Vector Informatik GmbH</strong> in
+            Shanghai, where I design enterprise collaboration platforms, extend
+            RESTful APIs for automotive tool integrations, and build AI agents that
+            connect large language models to real-world engineering workflows.
+          </p>
+          <p>
+            My journey started at <strong className="text-foreground">Penn State University</strong>,
+            where I studied Information Science &amp; Technology with a Business Minor.
+            Since then, I&apos;ve worked across software engineering, data visualization,
+            and IT operations — from geospatial applications at the Chinese Academy of
+            Sciences to financial risk modeling at Ernst &amp; Young.
+          </p>
+          <p>
+            Outside of work, I build open-source tools like{" "}
+            <strong className="text-foreground">ragviz</strong> (a Graph RAG visualization
+            platform), <strong className="text-foreground">viber</strong> (a DOM capture tool for
+            AI-assisted coding), and <strong className="text-foreground">Pawdig</strong> (an AI
+            document intelligence platform). I&apos;m especially interested in making AI
+            technologies more visual, interactive, and accessible to developers.
+          </p>
+        </article>
+
+        {/* Skills */}
+        <section className="mb-16">
+          <h2 className="mb-6 text-xl font-bold tracking-tight">Skills</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {skillCategories.map((cat) => (
+              <div key={cat.category}>
+                <h3 className="mb-2 font-mono text-sm font-medium text-blue-400">
+                  {cat.category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="font-normal">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Education & Certs */}
+        <section>
+          <h2 className="mb-6 text-xl font-bold tracking-tight">
+            Education &amp; Certifications
+          </h2>
+          <div className="space-y-4">
+            {education.map((edu) => (
+              <div
+                key={edu.degree}
+                className="rounded-lg border border-border/50 bg-card/50 px-5 py-4"
+              >
+                <p className="font-medium">{edu.degree}</p>
+                <p className="text-sm text-blue-400">{edu.school}</p>
+                {edu.minor && (
+                  <p className="text-sm text-muted-foreground">{edu.minor}</p>
+                )}
+              </div>
+            ))}
+            <div className="flex flex-wrap gap-3">
+              {certifications.map((cert) => (
+                <Badge key={cert} variant="outline" className="font-normal">
+                  {cert}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
