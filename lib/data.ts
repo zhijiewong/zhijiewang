@@ -5,7 +5,7 @@ export const siteConfig = {
     "Full-stack developer building AI-powered tools for document intelligence, knowledge visualization, and developer productivity. IT Expert at Vector Informatik GmbH.",
   url: "https://zhijiewang.me",
   email: "wang.zhijie@163.com",
-  linkedin: "https://www.linkedin.com/in/zhijiewang",
+  linkedin: "https://www.linkedin.com/in/zhijiewong",
   github: "https://github.com/zhijiewong",
 };
 

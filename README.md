@@ -10,5 +10,5 @@ Next.js 16 · Tailwind CSS · shadcn/ui · Vercel
 
 ## Links
 
-- [LinkedIn](https://www.linkedin.com/in/zhijiewang)
+- [LinkedIn](https://www.linkedin.com/in/zhijiewong)
 - [GitHub](https://github.com/zhijiewong)
