@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { Mail } from "lucide-react";
 import { siteConfig } from "@/lib/data";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 
 export function Hero() {
   return (
@@ -32,29 +34,30 @@ export function Hero() {
             at Vector Informatik GmbH.
           </p>
 
-          <div className="flex items-center gap-4 text-sm">
+          <div className="flex items-center gap-3 text-sm">
             <a
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
-              GitHub
+              <GithubIcon className="h-4 w-4" />
+              GitHub<span className="sr-only"> (opens in new tab)</span>
             </a>
-            <span className="text-border">|</span>
             <a
               href={siteConfig.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
-              LinkedIn
+              <LinkedinIcon className="h-4 w-4" />
+              LinkedIn<span className="sr-only"> (opens in new tab)</span>
             </a>
-            <span className="text-border">|</span>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
+              <Mail className="h-4 w-4" aria-hidden="true" />
               Email
             </a>
           </div>

@@ -7,7 +7,7 @@ export default function Home() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <main className="flex-1">
+    <main id="main-content" className="flex-1">
       <Hero />
 
       <section className="mx-auto max-w-4xl px-6 py-16">

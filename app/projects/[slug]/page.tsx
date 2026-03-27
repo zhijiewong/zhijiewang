@@ -39,7 +39,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main className="flex-1">
+    <main id="main-content" className="flex-1">
       <div className="mx-auto max-w-4xl px-6 py-16">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-muted-foreground">
@@ -99,7 +99,7 @@ export default async function ProjectPage({
           {/* Sidebar */}
           <aside className="space-y-6">
             <div>
-              <h3 className="mb-3 font-mono text-sm font-medium text-blue-400">
+              <h3 className="mb-3 font-mono text-sm font-medium text-blue-300">
                 Tech Stack
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -113,7 +113,7 @@ export default async function ProjectPage({
 
             {project.links.length > 0 && (
               <div>
-                <h3 className="mb-3 font-mono text-sm font-medium text-blue-400">
+                <h3 className="mb-3 font-mono text-sm font-medium text-blue-300">
                   Links
                 </h3>
                 <div className="space-y-2">
@@ -126,7 +126,8 @@ export default async function ProjectPage({
                       className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link.label}
-                      <span>&nearr;</span>
+                      <span aria-hidden="true">&nearr;</span>
+                      <span className="sr-only"> (opens in new tab)</span>
                     </a>
                   ))}
                 </div>

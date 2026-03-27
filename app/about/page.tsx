@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="flex-1">
+    <main id="main-content" className="flex-1">
       <div className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-12 flex items-center gap-6">
           <Image
@@ -29,7 +29,7 @@ export default function AboutPage() {
         </div>
 
         {/* Narrative bio */}
-        <article className="prose-invert mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed">
+        <article className="mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed">
           <p>
             I&apos;m a full-stack developer focused on building AI-powered tools for
             document intelligence, knowledge visualization, and infrastructure
@@ -62,7 +62,7 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             {skillCategories.map((cat) => (
               <div key={cat.category}>
-                <h3 className="mb-2 font-mono text-sm font-medium text-blue-400">
+                <h3 className="mb-2 font-mono text-sm font-medium text-blue-300">
                   {cat.category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 className="rounded-lg border border-border/50 bg-card/50 px-5 py-4"
               >
                 <p className="font-medium">{edu.degree}</p>
-                <p className="text-sm text-blue-400">{edu.school}</p>
+                <p className="text-sm text-blue-300">{edu.school}</p>
                 {edu.minor && (
                   <p className="text-sm text-muted-foreground">{edu.minor}</p>
                 )}

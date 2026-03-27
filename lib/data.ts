@@ -39,7 +39,7 @@ export const projects: Project[] = [
     links: [{ label: "Website", url: "https://pawdig.com" }],
     featured: true,
     color: "text-red-400 bg-red-500/10",
-    logo: "/pawdig-logo.png",
+    logo: "/pawdig-logo.webp",
   },
   {
     slug: "ragviz",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     color: "text-yellow-400 bg-yellow-500/10",
-    logo: "/viber-logo.png",
+    logo: "/viber-logo.webp",
   },
   {
     slug: "aiops",
