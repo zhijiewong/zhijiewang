@@ -71,6 +71,7 @@ export const projects: Project[] = [
       "viber injects into any webpage, captures the DOM tree with styles and layout information, and pipes it directly into your IDE. Paired with AI assistants, it turns any website into a component blueprint.",
     tech: ["TypeScript", "Playwright", "VS Code API", "Floating UI"],
     links: [
+      { label: "Website", url: "https://viber.dev" },
       { label: "GitHub", url: "https://github.com/zhijiewong/viber" },
     ],
     featured: true,
@@ -131,8 +132,13 @@ export const education = [
   },
 ];
 
-export const certifications = [
-  "CFA Sustainable Investing Certificate",
+export interface Certification {
+  name: string;
+  logo: string;
+}
+
+export const certifications: Certification[] = [
+  { name: "CFA Sustainable Investing Certificate", logo: "/cfa-logo.jpg" },
 ];
 
 export const navLinks = [

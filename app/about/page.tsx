@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { skillCategories, education, certifications, siteConfig } from "@/lib/data";
 
@@ -56,24 +58,34 @@ export default function AboutPage() {
           </p>
         </article>
 
+        <Link
+          href="/projects"
+          className="mb-16 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+        >
+          See my work
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </Link>
+
         {/* Skills */}
         <section className="mb-16">
           <h2 className="mb-6 text-xl font-bold tracking-tight">Skills</h2>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {skillCategories.map((cat) => (
-              <div key={cat.category}>
-                <h3 className="mb-2 font-mono text-sm font-medium text-blue-300">
-                  {cat.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {cat.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="font-normal">
-                      {skill}
-                    </Badge>
-                  ))}
+          <div className="glass p-6">
+            <div className="grid gap-6 sm:grid-cols-2">
+              {skillCategories.map((cat) => (
+                <div key={cat.category}>
+                  <h3 className="mb-2 font-mono text-sm font-medium text-blue-300">
+                    {cat.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {cat.skills.map((skill) => (
+                      <Badge key={skill} variant="secondary" className="font-normal">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
@@ -82,11 +94,11 @@ export default function AboutPage() {
           <h2 className="mb-6 text-xl font-bold tracking-tight">
             Education &amp; Certifications
           </h2>
-          <div className="space-y-4">
+          <div className="glass p-6 space-y-4">
             {education.map((edu) => (
               <div
                 key={edu.degree}
-                className="rounded-lg border border-border/50 bg-card/50 px-5 py-4"
+                className="rounded-lg border border-white/5 bg-white/[0.02] px-5 py-4"
               >
                 <p className="font-medium">{edu.degree}</p>
                 <p className="text-sm text-blue-300">{edu.school}</p>
@@ -98,17 +110,17 @@ export default function AboutPage() {
             <div className="flex flex-wrap gap-3">
               {certifications.map((cert) => (
                 <div
-                  key={cert}
-                  className="flex items-center gap-3 rounded-lg border border-border/50 bg-card/50 px-4 py-3"
+                  key={cert.name}
+                  className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/[0.02] px-4 py-3"
                 >
                   <Image
-                    src="/cfa-logo.jpg"
-                    alt="CFA Institute"
+                    src={cert.logo}
+                    alt={cert.name}
                     width={40}
                     height={40}
                     className="h-10 w-10 rounded-lg object-cover"
                   />
-                  <p className="text-sm font-medium">{cert}</p>
+                  <p className="text-sm font-medium">{cert.name}</p>
                 </div>
               ))}
             </div>

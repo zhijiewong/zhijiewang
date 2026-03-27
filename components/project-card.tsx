@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { TiltCard } from "@/components/tilt-card";
 import type { Project } from "@/lib/data";
 
 function ProjectIcon({ project }: { project: Project }) {
@@ -24,32 +25,34 @@ function ProjectIcon({ project }: { project: Project }) {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className="group block rounded-lg border border-border/50 bg-card/50 p-6 transition-colors hover:border-blue-500/30 hover:bg-card"
-    >
-      <div className="mb-3 flex items-center gap-3">
-        <ProjectIcon project={project} />
-        <div>
-          <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
-            {project.name}
-          </h3>
-          <p className="text-sm text-muted-foreground">{project.tagline}</p>
+    <TiltCard>
+      <Link
+        href={`/projects/${project.slug}`}
+        className="group block h-full rounded-2xl glass p-6 transition-colors hover:border-blue-500/30"
+      >
+        <div className="mb-3 flex items-center gap-3">
+          <ProjectIcon project={project} />
+          <div>
+            <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
+              {project.name}
+            </h3>
+            <p className="text-sm text-muted-foreground">{project.tagline}</p>
+          </div>
         </div>
-      </div>
 
-      <p className="mb-4 text-sm text-muted-foreground line-clamp-2">
-        {project.description}
-      </p>
+        <p className="mb-4 text-sm text-muted-foreground line-clamp-2">
+          {project.description}
+        </p>
 
-      <div className="flex flex-wrap gap-1.5">
-        {project.tech.slice(0, 4).map((t) => (
-          <Badge key={t} variant="secondary" className="text-xs font-normal">
-            {t}
-          </Badge>
-        ))}
-      </div>
-    </Link>
+        <div className="flex flex-wrap gap-1.5">
+          {project.tech.slice(0, 4).map((t) => (
+            <Badge key={t} variant="secondary" className="text-xs font-normal">
+              {t}
+            </Badge>
+          ))}
+        </div>
+      </Link>
+    </TiltCard>
   );
 }
 

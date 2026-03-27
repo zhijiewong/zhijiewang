@@ -84,7 +84,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.165 0.015 270);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -127,6 +127,104 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Dot grid pattern — revealed by mouse spotlight */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(350px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(350px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+}
+
+/* 3D Background Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.orb-blue {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3), transparent 65%);
+  top: -15%;
+  left: -5%;
+  animation: orb-drift-1 20s ease-in-out infinite alternate;
+}
+
+.orb-purple {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.22), transparent 65%);
+  bottom: -10%;
+  right: -8%;
+  animation: orb-drift-2 25s ease-in-out infinite alternate;
+}
+
+.orb-green {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 65%);
+  bottom: 20%;
+  left: 30%;
+  animation: orb-drift-3 30s ease-in-out infinite alternate;
+}
+
+@keyframes orb-drift-1 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(60px, 40px); }
+}
+
+@keyframes orb-drift-2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-50px, -30px); }
+}
+
+@keyframes orb-drift-3 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, -50px); }
+}
+
+/* Floating hero avatar */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.avatar-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Tilt card */
+.tilt-card {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.06);
+}
+
+/* Glass container */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  border-radius: 16px 16px 0 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -97,7 +97,7 @@ export default async function ProjectPage({
           </div>
 
           {/* Sidebar */}
-          <aside className="space-y-6">
+          <aside className="glass p-6 space-y-6 h-fit">
             <div>
               <h3 className="mb-3 font-mono text-sm font-medium text-blue-300">
                 Tech Stack
