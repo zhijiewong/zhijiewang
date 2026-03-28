@@ -126,7 +126,7 @@ export default async function ProjectPage({
                       className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link.label}
-                      <span aria-hidden="true">&nearr;</span>
+                      <span aria-hidden="true">↗</span>
                       <span className="sr-only"> (opens in new tab)</span>
                     </a>
                   ))}
