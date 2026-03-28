@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig, navLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -17,27 +18,32 @@ export function Navbar() {
           {siteConfig.name}
         </Link>
 
-        <ul className="hidden gap-6 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
-                className={cn(
-                  "text-sm transition-colors hover:text-foreground",
-                  pathname === link.href
-                    ? "text-foreground"
-                    : "text-muted-foreground"
-                )}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden items-center gap-6 md:flex">
+          <ul className="flex gap-6">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={cn(
+                    "text-sm transition-colors hover:text-foreground",
+                    pathname === link.href
+                      ? "text-foreground"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
-        <button
-          className="md:hidden text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring rounded-md"
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            className="text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring rounded-md"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -48,8 +54,9 @@ export function Navbar() {
             ) : (
               <path d="M4 12h16M4 6h16M4 18h16" />
             )}
-          </svg>
-        </button>
+            </svg>
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (

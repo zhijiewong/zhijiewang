@@ -1,13 +1,15 @@
 "use client";
 
-import { useRef, useEffect, type ReactNode, type MouseEvent } from "react";
+import { useRef, useEffect, type ReactNode, type MouseEvent, type CSSProperties } from "react";
 
 export function TiltCard({
   children,
   className = "",
+  style,
 }: {
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const prefersReduced = useRef(false);
@@ -40,6 +42,7 @@ export function TiltCard({
     <div
       ref={ref}
       className={`tilt-card ${className}`}
+      style={style}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >

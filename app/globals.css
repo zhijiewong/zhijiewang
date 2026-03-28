@@ -227,6 +227,28 @@
   border-radius: 16px 16px 0 0;
 }
 
+/* Light-mode overrides for custom classes */
+:root:not(.dark) .glass {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+:root:not(.dark) .glass::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+}
+
+:root:not(.dark) .dot-grid {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+:root:not(.dark) .orb-blue { opacity: 0.4; }
+:root:not(.dark) .orb-purple { opacity: 0.3; }
+:root:not(.dark) .orb-green { opacity: 0.25; }
+
+:root:not(.dark) .tilt-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 20px rgba(59, 130, 246, 0.04);
+}
+
 /* Page entrance */
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(12px); }
@@ -236,6 +258,13 @@
 .animate-fade-in-up {
   animation: fade-in-up 0.4s ease-out;
 }
+
+/* Staggered entrance */
+.stagger-1 { animation-delay: 0.1s; animation-fill-mode: both; }
+.stagger-2 { animation-delay: 0.2s; animation-fill-mode: both; }
+.stagger-3 { animation-delay: 0.3s; animation-fill-mode: both; }
+.stagger-4 { animation-delay: 0.4s; animation-fill-mode: both; }
+.stagger-5 { animation-delay: 0.5s; animation-fill-mode: both; }
 
 @media (prefers-reduced-motion: reduce) {
   *,

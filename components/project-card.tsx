@@ -23,9 +23,12 @@ function ProjectIcon({ project }: { project: Project }) {
   );
 }
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, index }: { project: Project; index?: number }) {
   return (
-    <TiltCard>
+    <TiltCard
+      className={index !== undefined ? "animate-fade-in-up" : undefined}
+      style={index !== undefined ? { animationDelay: `${index * 0.1}s`, animationFillMode: "both" } : undefined}
+    >
       <Link
         href={`/projects/${project.slug}`}
         className="group block h-full rounded-2xl glass p-6 transition-colors hover:border-blue-500/30"

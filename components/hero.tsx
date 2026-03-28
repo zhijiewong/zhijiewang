@@ -60,7 +60,7 @@ export function Hero() {
             </Link>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-white/20 hover:text-foreground"
+              className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-border/80 hover:text-foreground"
             >
               Get in Touch
             </a>

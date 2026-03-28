@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main id="main-content" className="flex-1 animate-fade-in-up">
+    <main id="main-content" className="flex-1">
       <div className="mx-auto max-w-4xl px-6 py-16">
-        <div className="mb-12 flex items-center gap-6">
+        <div className="mb-12 flex items-center gap-6 animate-fade-in-up">
           <div className="avatar-float relative shrink-0">
             <Image
               src="/avatar.jpg"
@@ -55,7 +55,7 @@ export default function AboutPage() {
         </div>
 
         {/* Narrative bio */}
-        <article className="mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed">
+        <article className="mb-16 max-w-none space-y-4 text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
           <p>
             I&apos;m a full-stack developer focused on building AI-powered tools for
             document intelligence, knowledge visualization, and infrastructure
@@ -91,7 +91,7 @@ export default function AboutPage() {
         </Link>
 
         {/* Skills */}
-        <section className="mb-16">
+        <section className="mb-16 animate-fade-in-up stagger-2">
           <h2 className="mb-6 text-xl font-bold tracking-tight">Skills</h2>
           <div className="glass p-6">
             <div className="grid gap-6 sm:grid-cols-2">
@@ -114,7 +114,7 @@ export default function AboutPage() {
         </section>
 
         {/* Education & Certs */}
-        <section>
+        <section className="animate-fade-in-up stagger-3">
           <h2 className="mb-6 text-xl font-bold tracking-tight">
             Education &amp; Certifications
           </h2>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             {education.map((edu) => (
               <div
                 key={edu.degree}
-                className="rounded-lg border border-white/5 bg-white/[0.02] px-5 py-4"
+                className="rounded-lg border border-border/50 bg-muted/30 px-5 py-4"
               >
                 <p className="font-medium">{edu.degree}</p>
                 <p className="text-sm text-blue-300">{edu.school}</p>
@@ -135,7 +135,7 @@ export default function AboutPage() {
               {certifications.map((cert) => (
                 <div
                   key={cert.name}
-                  className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/[0.02] px-4 py-3"
+                  className="flex items-center gap-3 rounded-lg border border-border/50 bg-muted/30 px-4 py-3"
                 >
                   <Image
                     src={cert.logo}

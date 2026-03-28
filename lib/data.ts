@@ -8,6 +8,7 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/zhijiewong",
   github: "https://github.com/zhijiewong",
   resume: "/zhijie-wang-resume.pdf",
+  formspreeId: "",
 };
 
 export interface Project {
@@ -24,6 +25,7 @@ export interface Project {
   color: string;
   logo?: string;
   outcomes?: string[];
+  category: "AI/ML" | "Developer Tools" | "Infrastructure";
 }
 
 export const projects: Project[] = [
@@ -47,6 +49,7 @@ export const projects: Project[] = [
       "95% extraction accuracy on structured fields",
       "Reduces manual review time by 80%",
     ],
+    category: "AI/ML",
   },
   {
     slug: "ragviz",
@@ -70,6 +73,7 @@ export const projects: Project[] = [
       "Real-time parameter tuning for RAG pipeline optimization",
       "Full local LLM support via Ollama and llama.cpp",
     ],
+    category: "AI/ML",
   },
   {
     slug: "viber",
@@ -94,6 +98,7 @@ export const projects: Project[] = [
       "Works with Cursor IDE and VS Code",
       "Turns any webpage into a component blueprint for AI coding",
     ],
+    category: "Developer Tools",
   },
   {
     slug: "aiops",
@@ -115,6 +120,7 @@ export const projects: Project[] = [
       "Reduces mean time to resolution with automated runbook execution",
       "Open-source and community-driven",
     ],
+    category: "Infrastructure",
   },
 ];
 
