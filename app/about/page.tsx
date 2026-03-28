@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { ContactCTA } from "@/components/contact-cta";
 import { skillCategories, education, certifications, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -12,21 +13,44 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" className="flex-1 animate-fade-in-up">
       <div className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-12 flex items-center gap-6">
-          <Image
-            src="/avatar.jpg"
-            alt={siteConfig.name}
-            width={80}
-            height={80}
-            className="h-20 w-20 shrink-0 rounded-full border-2 border-blue-500/30 object-cover"
-          />
+          <div className="avatar-float relative shrink-0">
+            <Image
+              src="/avatar.jpg"
+              alt={siteConfig.name}
+              width={112}
+              height={112}
+              className="relative z-10 h-28 w-28 rounded-full border-2 border-blue-500/30 object-cover shadow-[0_12px_30px_rgba(0,0,0,0.4),0_0_40px_rgba(59,130,246,0.08)]"
+            />
+            {/* Orbital ring */}
+            <div
+              className="pointer-events-none absolute -inset-3 rounded-full border border-blue-500/15"
+              style={{ transform: "rotateX(65deg)" }}
+              aria-hidden="true"
+            />
+            {/* Glow dot on ring */}
+            <div
+              className="pointer-events-none absolute -top-1 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-blue-400/60 shadow-[0_0_8px_rgba(96,165,250,0.4)]"
+              aria-hidden="true"
+            />
+          </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight">About Me</h1>
             <p className="mt-1 text-muted-foreground">
               The story behind the code
             </p>
+            <a
+              href={siteConfig.resume}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-2 rounded-lg bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-300"
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              Download Resume
+            </a>
           </div>
         </div>
 
@@ -127,6 +151,8 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
+
+      <ContactCTA />
     </main>
   );
 }

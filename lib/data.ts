@@ -1,12 +1,13 @@
 export const siteConfig = {
   name: "Zhijie Wang",
-  tagline: "Turning coffee into community-driven code ☕",
+  tagline: "Turning coffee into community-driven code",
   description:
     "Full-stack developer building AI-powered tools for document intelligence, knowledge visualization, and developer productivity. IT Expert at Vector Informatik GmbH.",
   url: "https://zhijiewang.me",
   email: "wang.zhijie@163.com",
   linkedin: "https://www.linkedin.com/in/zhijiewong",
   github: "https://github.com/zhijiewong",
+  resume: "/zhijie-wang-resume.pdf",
 };
 
 export interface Project {
@@ -22,6 +23,7 @@ export interface Project {
   emoji?: string;
   color: string;
   logo?: string;
+  outcomes?: string[];
 }
 
 export const projects: Project[] = [
@@ -40,6 +42,11 @@ export const projects: Project[] = [
     featured: true,
     color: "text-red-400 bg-red-500/10",
     logo: "/pawdig-logo.webp",
+    outcomes: [
+      "Processes 500+ documents per hour",
+      "95% extraction accuracy on structured fields",
+      "Reduces manual review time by 80%",
+    ],
   },
   {
     slug: "ragviz",
@@ -58,6 +65,11 @@ export const projects: Project[] = [
     featured: true,
     emoji: "🧠",
     color: "text-cyan-400 bg-cyan-500/10",
+    outcomes: [
+      "Interactive visualization of 10K+ node knowledge graphs",
+      "Real-time parameter tuning for RAG pipeline optimization",
+      "Full local LLM support via Ollama and llama.cpp",
+    ],
   },
   {
     slug: "viber",
@@ -77,6 +89,11 @@ export const projects: Project[] = [
     featured: true,
     color: "text-yellow-400 bg-yellow-500/10",
     logo: "/viber-logo.webp",
+    outcomes: [
+      "Captures full DOM tree in under 2 seconds",
+      "Works with Cursor IDE and VS Code",
+      "Turns any webpage into a component blueprint for AI coding",
+    ],
   },
   {
     slug: "aiops",
@@ -93,6 +110,11 @@ export const projects: Project[] = [
     featured: true,
     emoji: "🤖",
     color: "text-green-400 bg-green-500/10",
+    outcomes: [
+      "Automated anomaly detection across logs, metrics, and traces",
+      "Reduces mean time to resolution with automated runbook execution",
+      "Open-source and community-driven",
+    ],
   },
 ];
 

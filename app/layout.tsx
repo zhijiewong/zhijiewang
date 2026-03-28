@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/data";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { OrbBackground } from "@/components/orb-background";
+import { BackToTop } from "@/components/back-to-top";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -96,6 +97,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

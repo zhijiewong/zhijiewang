@@ -36,23 +36,35 @@ export function Hero() {
               {siteConfig.name}
             </h1>
             <p className="mt-3 text-xl text-blue-400 font-medium">
+              I build AI-powered tools that turn unstructured data into
+              actionable intelligence
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
               {siteConfig.tagline}
             </p>
           </div>
 
           <p className="max-w-xl text-muted-foreground leading-relaxed">
-            Exploring the frontier of AI-powered tools, from document
-            intelligence to knowledge graphs and AIOps. Currently an IT Expert
-            at Vector Informatik GmbH.
+            From document intelligence to knowledge graphs and AIOps —
+            currently an IT Expert at Vector Informatik GmbH, exploring the
+            frontier of developer tools and AI.
           </p>
 
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-500/10 px-5 py-2.5 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-300"
-          >
-            View Projects
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500/10 px-5 py-2.5 text-sm font-medium text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-300"
+            >
+              View Projects
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-white/20 hover:text-foreground"
+            >
+              Get in Touch
+            </a>
+          </div>
 
           <div className="flex items-center gap-3 text-sm">
             <a

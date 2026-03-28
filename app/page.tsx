@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { ProjectCard } from "@/components/project-card";
+import { ContactCTA } from "@/components/contact-cta";
 import { projects } from "@/lib/data";
 
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" className="flex-1 animate-fade-in-up">
       <Hero />
 
       <section className="mx-auto max-w-4xl px-6 py-16">
@@ -27,6 +28,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <ContactCTA />
     </main>
   );
 }

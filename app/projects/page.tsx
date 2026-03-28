@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" className="flex-1 animate-fade-in-up">
       <div className="mx-auto max-w-4xl px-6 py-16">
         <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
         <p className="mt-2 text-muted-foreground">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { projects, getProject, siteConfig } from "@/lib/data";
 import { ProjectIcon } from "@/components/project-card";
@@ -39,7 +40,7 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" className="flex-1 animate-fade-in-up">
       <div className="mx-auto max-w-4xl px-6 py-16">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-muted-foreground">
@@ -94,6 +95,28 @@ export default async function ProjectPage({
                 {project.approach}
               </p>
             </section>
+
+            {project.outcomes && project.outcomes.length > 0 && (
+              <section>
+                <h2 className="mb-3 text-lg font-semibold">
+                  Results &amp; Impact
+                </h2>
+                <ul className="space-y-2">
+                  {project.outcomes.map((outcome) => (
+                    <li
+                      key={outcome}
+                      className="flex items-start gap-2 text-muted-foreground leading-relaxed"
+                    >
+                      <Check
+                        className="mt-1 h-4 w-4 shrink-0 text-blue-400"
+                        aria-hidden="true"
+                      />
+                      {outcome}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </div>
 
           {/* Sidebar */}
