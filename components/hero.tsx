@@ -6,29 +6,20 @@ import { GithubIcon, LinkedinIcon } from "@/components/icons";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       <div className="relative mx-auto max-w-4xl px-6 py-24 sm:py-32">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="avatar-float relative">
-            <Image
-              src="/avatar.jpg"
-              alt={siteConfig.name}
-              width={96}
-              height={96}
-              className="relative z-10 h-24 w-24 rounded-full border-2 border-blue-500/30 object-cover shadow-[0_12px_30px_rgba(0,0,0,0.4),0_0_40px_rgba(59,130,246,0.08)]"
-              priority
-            />
-            {/* Orbital ring */}
-            <div
-              className="pointer-events-none absolute -inset-3 rounded-full border border-blue-500/15"
-              style={{ transform: "rotateX(65deg)" }}
-              aria-hidden="true"
-            />
-            {/* Glow dot on ring */}
-            <div
-              className="pointer-events-none absolute -top-1 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-blue-400/60 shadow-[0_0_8px_rgba(96,165,250,0.4)]"
-              aria-hidden="true"
-            />
+            <div className="avatar-aura relative h-24 w-24">
+              <Image
+                src="/avatar.jpg"
+                alt={siteConfig.name}
+                width={96}
+                height={96}
+                className="relative h-24 w-24 rounded-full border-2 border-blue-500/30 object-cover shadow-[0_8px_24px_rgba(0,0,0,0.3),0_0_0_1px_rgba(59,130,246,0.1)]"
+                priority
+              />
+            </div>
           </div>
 
           <div>
